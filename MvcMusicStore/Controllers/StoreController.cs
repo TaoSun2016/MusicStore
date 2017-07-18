@@ -15,9 +15,9 @@ namespace MvcMusicStore.Controllers
         }
 
         // GET: Store/Browse
-        public string Browse()
+        public string Browse(string genre)
         {
-            return "Hello, from StoreController.Browse()";
+            return HttpUtility.HtmlEncode("Store.Browse, Genre =" + genre);
         }
 
         // GET: Store/Details
