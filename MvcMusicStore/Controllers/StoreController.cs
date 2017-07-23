@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcMusicStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,10 +23,10 @@ namespace MvcMusicStore.Controllers
         }
 
         // GET: Store/Details
-        public string Details(int id)
+        public ActionResult Details(int id)
         {
-            string message = HttpUtility.HtmlEncode("ID = "+id);
-            return message;
+            Album album = new Album { Title = "Album" + id };
+            return View(album);
         }
     }
 }
